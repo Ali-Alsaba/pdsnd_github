@@ -7,6 +7,10 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'new york': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
+
+
+
+
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -49,6 +53,9 @@ def get_filters():
     print('-'*80)
 
 
+
+
+
 def load_data(city, month, day):
     """
     Loads data for the specified city and filters by month and day if applicable.
@@ -83,6 +90,9 @@ def load_data(city, month, day):
         df = df[df['day_of_week'] == day.title()]
 
     return df
+
+
+
 
 
 def time_stats(df):
@@ -128,6 +138,8 @@ def time_stats(df):
 
 
 
+
+
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
 
@@ -156,6 +168,9 @@ def station_stats(df):
     print('-'*80)
 
 
+
+
+
 def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
 
@@ -180,6 +195,9 @@ def trip_duration_stats(df):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*80)
+
+
+
 
 
 def user_stats(df):
@@ -235,6 +253,9 @@ def user_stats(df):
     print('-'*80)
 
 
+
+
+
 def data_disp(df):
     ''' Display some raw data to the user '''
     index = 0
@@ -256,6 +277,10 @@ def data_disp(df):
                     break
         if query.lower() != 'yes':
                     break
+
+
+
+
 
 def main():
     while True:
