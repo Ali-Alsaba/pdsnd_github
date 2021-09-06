@@ -98,7 +98,7 @@ def time_stats(df):
         common_month = df['month'].mode()[0]
         print('Most common month is:', months[common_month - 1])
     except Exception as e:
-        print('Exception occurred while attempting to calculate most common month, please make sure you provided correct input option')
+        print('Exception occurred while attempting to calculate most common month, please make sure you provide correct input option')
         print('Error details: {}'.format(e))
 
     # display the most common day of week
@@ -106,7 +106,7 @@ def time_stats(df):
         common_weekday = df['day_of_week'].mode()[0]
         print('Most common day of week:', common_weekday)
     except Exception as e:
-        print('Exception occurred while attempting to calculate most common day of week, please make sure you provided correct input option')
+        print('Exception occurred while attempting to calculate most common day of week, please make sure you provide correct input option')
         print('Error details: {}'.format(e))
 
 
@@ -120,7 +120,7 @@ def time_stats(df):
         print()
 
     except Exception as e:
-        print('Error occurred while attempting to calculate most popular start hour, please make sure you provided a correct input option')
+        print('Error occurred while attempting to calculate most popular start hour, please make sure you provide a correct input option')
         print('Error details: {}'.format(e))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
@@ -150,7 +150,7 @@ def station_stats(df):
         print('Most frequent combination of start station and end station trip is:', mostly_combined_stns)
 
     except:
-        print('Error occurred, please make sure you provided a correct input option')
+        print('Error occurred, please make sure you provide a correct input option')
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*80)
@@ -167,7 +167,7 @@ def trip_duration_stats(df):
         print('total travel time', df['Trip Duration'].sum())
 
     except:
-        print('An error occurred, please make sure you provided a correct input option')
+        print('An error occurred, please make sure you provide a correct input option')
 
 
     # display mean travel time
@@ -175,7 +175,7 @@ def trip_duration_stats(df):
         print('mean travel time', df['Trip Duration'].mean())
 
     except:
-        print('Error occurred, please make sure you provided a correct input option')
+        print('Error occurred, please make sure you provide a correct input option')
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
