@@ -34,7 +34,7 @@ def get_filters():
                 months = ['january', 'february', 'march', 'april', 'may', 'june']
                 month = (months.index(month)) + 1
             df['month'].mode()[0]
-            day = input('Which day - Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday or all?\n')
+            day = input('Which day - Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday or all?\n').casefold()
 
             if day != 'all':
         # filter by day of week to create the new dataframe
