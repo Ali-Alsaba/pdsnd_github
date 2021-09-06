@@ -50,7 +50,7 @@ def get_filters():
     return city, month, day
 
 
-    print('-'*80)
+    print('-'*120)
 
 
 
@@ -134,7 +134,7 @@ def time_stats(df):
         print('Error details: {}'.format(e))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*80)
+    print('-'*120)
 
 
 
@@ -165,7 +165,7 @@ def station_stats(df):
         print('Error occurred, please make sure you provided a correct input option')
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*80)
+    print('-'*120)
 
 
 
@@ -194,7 +194,7 @@ def trip_duration_stats(df):
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*80)
+    print('-'*120)
 
 
 
@@ -250,7 +250,7 @@ def user_stats(df):
     except:
         print('no data available about the most common birth year for the given user inputs ')
 
-    print('-'*80)
+    print('-'*120)
 
 
 
