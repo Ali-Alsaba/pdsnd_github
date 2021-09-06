@@ -1,11 +1,14 @@
 import time
 import pandas as pd
-import numpy as np
 from IPython.display import display
 
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york': 'new_york_city.csv',
               'washington': 'washington.csv' }
+
+
+
+
 
 def get_filters():
     """
@@ -30,7 +33,7 @@ def get_filters():
                 months = ['january', 'february', 'march', 'april', 'may', 'june']
                 month = (months.index(month)) + 1
             df['month'].mode()[0]
-            day = input('Which day - Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday or all?\n')
+            day = input('Which day - Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday or all?\n').casefold()
 
             if day != 'all':
         # filter by day of week to create the new dataframe
@@ -46,7 +49,10 @@ def get_filters():
     return city, month, day
 
 
-    print('-'*80)
+    print('-'*120)
+
+
+
 
 
 def load_data(city, month, day):
@@ -83,6 +89,9 @@ def load_data(city, month, day):
         df = df[df['day_of_week'] == day.title()]
 
     return df
+
+
+
 
 
 def time_stats(df):
@@ -124,7 +133,9 @@ def time_stats(df):
         print('Error details: {}'.format(e))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*80)
+    print('-'*120)
+
+
 
 
 
@@ -153,7 +164,10 @@ def station_stats(df):
         print('Error occurred, please make sure you provide a correct input option')
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*80)
+    print('-'*120)
+
+
+
 
 
 def trip_duration_stats(df):
@@ -179,7 +193,10 @@ def trip_duration_stats(df):
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*80)
+    print('-'*120)
+
+
+
 
 
 def user_stats(df):
@@ -232,7 +249,10 @@ def user_stats(df):
     except:
         print('no data available about the most common birth year for the given user inputs ')
 
-    print('-'*80)
+    print('-'*120)
+
+
+
 
 
 def data_disp(df):
@@ -256,6 +276,10 @@ def data_disp(df):
                     break
         if query.lower() != 'yes':
                     break
+
+
+
+
 
 def main():
     while True:
